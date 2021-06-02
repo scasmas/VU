@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1617028257 source:c:\users\justj\desktop\ads\aerouostas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<stdbool.h>
+	"pQueueLib.c"
+
+1617027629 c:\users\justj\desktop\ads\aerouostas\pqueuelib.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"pQueueHead.h"
+
+1617027629 c:\users\justj\desktop\ads\aerouostas\pqueuehead.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

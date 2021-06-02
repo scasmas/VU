@@ -1,0 +1,2003 @@
+Justas Stonkus 4 grupė, 2 pogrupis, 3 užduotis 4 variantas
+
+4. Aerouostas (ADT: prioritetinė eilė, ilgas sveikas skaičius). Aerouostas turi 1 pakilimo/nusileidimo
+taką, besileidžiantys lėktuvai turi prioritetą, t. y. jei takas laisvas, tai pirmiausia priimamas
+besileidžiantis lėktuvas, bet jei kažkuris lėktuvas pradėjo pakilimą, tai visi kiti, tame tarpe ir norintys
+nusileisti, lėktuvai turi laukti; lėktuvas, norintis nusileisti, negali laukti labai ilgai, nes jam baigsis
+degalai. Tikslas: patyrinėti prie kokio apkrovimo aerouostui pakanka vieno tako. Pradiniai duomenys:
+nusileidimo laikas (trukmė), pakilimo laikas (trukmė), laikas, kurį norintis leistis lėktuvas, dar gali
+išbūti ore, lėktuvo panorusio kilti/leistis einamuoju momentu tikimybė (galima realizacija:
+generuojamas atsitiktinis skaičius ir tikrinama, ar jis tenkina tam tikrą sąlygą), besileidžiantys ir
+kylantys lėktuvai pasirodo su vienoda tikimybe. Rezultatai: nukritęs lėktuvas (modeliavimas iš karto
+baigiamas), maksimalus ir vidutinis norinčio nusileisti lėktuvo laukimo laikas, maksimalus ir vidutinis
+norinčio pakilti lėktuvo laukimo laikas.
+
+--------------------------------------------------
+
+I DALIS - DUOMENYS
+
+1) Nusileidimo laikas: 3 min.
+2) Pakilimo laikas: 2 min.
+3) Laikas, kuri lektuvas gali buti ore: 6 min.
+4) Tikimybe, kad atsiras lektuvas norintis pakilti ar nusileisti: 10%.
+
+II DALIS - VYKDYMAS
+
+T = 0
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 1
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 2
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 3
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 4
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 5
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 6
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 7
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 8
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 9
+
+	Lektuvai norintys leistis: L1.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L1 pradeda leistis.
+
+T = 10
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L1 leidziasi, kol nusileis liko laiko: 1.
+
+T = 11
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L1 nusileido.
+
+T = 12
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 13
+
+	Lektuvai norintys leistis: L2.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L2 pradeda leistis.
+
+T = 14
+
+	Lektuvai norintys leistis: L3.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L2 leidziasi, kol nusileis liko laiko: 1.
+
+T = 15
+
+	Lektuvai norintys leistis: L3.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L2 nusileido.
+
+T = 16
+
+	Lektuvai norintys leistis: L3.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L3 pradeda leistis.
+
+T = 17
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L3 leidziasi, kol nusileis liko laiko: 1.
+
+T = 18
+
+	Lektuvai norintys leistis: L4.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L3 nusileido.
+
+T = 19
+
+	Lektuvai norintys leistis: L4.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L4 pradeda leistis.
+
+T = 20
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L4 leidziasi, kol nusileis liko laiko: 1.
+
+T = 21
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L4 nusileido.
+
+T = 22
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 23
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K1.
+	Lektuvas K1 pradeda kilti.
+
+T = 24
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K2.
+	Lektuvas K1 pakilo.
+
+T = 25
+
+	Lektuvai norintys leistis: L5.
+	Lektuvai norintys kilti:  K2.
+	Lektuvas L5 pradeda leistis.
+
+T = 26
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K2.
+	Lektuvas L5 leidziasi, kol nusileis liko laiko: 1.
+
+T = 27
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K2.
+	Lektuvas L5 nusileido.
+
+T = 28
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K2.
+	Lektuvas K2 pradeda kilti.
+
+T = 29
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K2 pakilo.
+
+T = 30
+
+	Lektuvai norintys leistis: L6.
+	Lektuvai norintys kilti:  K3.
+	Lektuvas L6 pradeda leistis.
+
+T = 31
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K3.
+	Lektuvas L6 leidziasi, kol nusileis liko laiko: 1.
+
+T = 32
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K3.
+	Lektuvas L6 nusileido.
+
+T = 33
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K3.
+	Lektuvas K3 pradeda kilti.
+
+T = 34
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K3 pakilo.
+
+T = 35
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 36
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 37
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 38
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 39
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 40
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 41
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 42
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 43
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 44
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 45
+
+	Lektuvai norintys leistis: L7.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L7 pradeda leistis.
+
+T = 46
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L7 leidziasi, kol nusileis liko laiko: 1.
+
+T = 47
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K4.
+	Lektuvas L7 nusileido.
+
+T = 48
+
+	Lektuvai norintys leistis: L8.
+	Lektuvai norintys kilti:  K4.
+	Lektuvas L8 pradeda leistis.
+
+T = 49
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K4.
+	Lektuvas L8 leidziasi, kol nusileis liko laiko: 1.
+
+T = 50
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K4.
+	Lektuvas L8 nusileido.
+
+T = 51
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K4.
+	Lektuvas K4 pradeda kilti.
+
+T = 52
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K4 pakilo.
+
+T = 53
+
+	Lektuvai norintys leistis: L9.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L9 pradeda leistis.
+
+T = 54
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L9 leidziasi, kol nusileis liko laiko: 1.
+
+T = 55
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L9 nusileido.
+
+T = 56
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K5.
+	Lektuvas K5 pradeda kilti.
+
+T = 57
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K5 pakilo.
+
+T = 58
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 59
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 60
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 61
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 62
+
+	Lektuvai norintys leistis: L10.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L10 pradeda leistis.
+
+T = 63
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L10 leidziasi, kol nusileis liko laiko: 1.
+
+T = 64
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L10 nusileido.
+
+T = 65
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 66
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 67
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 68
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 69
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 70
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K6.
+	Lektuvas K6 pradeda kilti.
+
+T = 71
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K6 pakilo.
+
+T = 72
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 73
+
+	Lektuvai norintys leistis: L11.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L11 pradeda leistis.
+
+T = 74
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L11 leidziasi, kol nusileis liko laiko: 1.
+
+T = 75
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L11 nusileido.
+
+T = 76
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 77
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 78
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 79
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 80
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 81
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 82
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 83
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 84
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 85
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 86
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 87
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 88
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 89
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 90
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 91
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K7.
+	Lektuvas K7 pradeda kilti.
+
+T = 92
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K7 pakilo.
+
+T = 93
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 94
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 95
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 96
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 97
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 98
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 99
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 100
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 101
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 102
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 103
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 104
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 105
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 106
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 107
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 108
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 109
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 110
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 111
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 112
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 113
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 114
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 115
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 116
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 117
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 118
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 119
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 120
+
+	Lektuvai norintys leistis: L12.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L12 pradeda leistis.
+
+T = 121
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L12 leidziasi, kol nusileis liko laiko: 1.
+
+T = 122
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L12 nusileido.
+
+T = 123
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 124
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 125
+
+	Lektuvai norintys leistis: L13.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L13 pradeda leistis.
+
+T = 126
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L13 leidziasi, kol nusileis liko laiko: 1.
+
+T = 127
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L13 nusileido.
+
+T = 128
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 129
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 130
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 131
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 132
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 133
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 134
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 135
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 136
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 137
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 138
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 139
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 140
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 141
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 142
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 143
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 144
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 145
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 146
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 147
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 148
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 149
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 150
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 151
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K8.
+	Lektuvas K8 pradeda kilti.
+
+T = 152
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K9.
+	Lektuvas K8 pakilo.
+
+T = 153
+
+	Lektuvai norintys leistis: L14.
+	Lektuvai norintys kilti:  K9.
+	Lektuvas L14 pradeda leistis.
+
+T = 154
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K9.
+	Lektuvas L14 leidziasi, kol nusileis liko laiko: 1.
+
+T = 155
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K9, K10.
+	Lektuvas L14 nusileido.
+
+T = 156
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K9, K10.
+	Lektuvas K9 pradeda kilti.
+
+T = 157
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K10.
+	Lektuvas K9 pakilo.
+
+T = 158
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K10.
+	Lektuvas K10 pradeda kilti.
+
+T = 159
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K10 pakilo.
+
+T = 160
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 161
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 162
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 163
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 164
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 165
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 166
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 167
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 168
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 169
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 170
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 171
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 172
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 173
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 174
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 175
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 176
+
+	Lektuvai norintys leistis: L15.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L15 pradeda leistis.
+
+T = 177
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L15 leidziasi, kol nusileis liko laiko: 1.
+
+T = 178
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L15 nusileido.
+
+T = 179
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 180
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 181
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 182
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 183
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 184
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 185
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 186
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 187
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 188
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 189
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 190
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 191
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 192
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 193
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K11.
+	Lektuvas K11 pradeda kilti.
+
+T = 194
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K11 pakilo.
+
+T = 195
+
+	Lektuvai norintys leistis: L16.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L16 pradeda leistis.
+
+T = 196
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K12.
+	Lektuvas L16 leidziasi, kol nusileis liko laiko: 1.
+
+T = 197
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K12, K13.
+	Lektuvas L16 nusileido.
+
+T = 198
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K12, K13, K14.
+	Lektuvas K12 pradeda kilti.
+
+T = 199
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K13, K14.
+	Lektuvas K12 pakilo.
+
+T = 200
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K13, K14.
+	Lektuvas K13 pradeda kilti.
+
+T = 201
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K14.
+	Lektuvas K13 pakilo.
+
+T = 202
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K14.
+	Lektuvas K14 pradeda kilti.
+
+T = 203
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K14 pakilo.
+
+T = 204
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 205
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 206
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 207
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 208
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 209
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 210
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 211
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 212
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K15.
+	Lektuvas K15 pradeda kilti.
+
+T = 213
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K15 pakilo.
+
+T = 214
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 215
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 216
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 217
+
+	Lektuvai norintys leistis: L17.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L17 pradeda leistis.
+
+T = 218
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L17 leidziasi, kol nusileis liko laiko: 1.
+
+T = 219
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K16.
+	Lektuvas L17 nusileido.
+
+T = 220
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K16.
+	Lektuvas K16 pradeda kilti.
+
+T = 221
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K16 pakilo.
+
+T = 222
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 223
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 224
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 225
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 226
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 227
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 228
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 229
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 230
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 231
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 232
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 233
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 234
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 235
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 236
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 237
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 238
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K17.
+	Lektuvas K17 pradeda kilti.
+
+T = 239
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K17 pakilo.
+
+T = 240
+
+	Lektuvai norintys leistis: L18.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L18 pradeda leistis.
+
+T = 241
+
+	Lektuvai norintys leistis: L19.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L18 leidziasi, kol nusileis liko laiko: 1.
+
+T = 242
+
+	Lektuvai norintys leistis: L19.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L18 nusileido.
+
+T = 243
+
+	Lektuvai norintys leistis: L19.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L19 pradeda leistis.
+
+T = 244
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L19 leidziasi, kol nusileis liko laiko: 1.
+
+T = 245
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L19 nusileido.
+
+T = 246
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 247
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 248
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 249
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 250
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 251
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 252
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 253
+
+	Lektuvai norintys leistis: L20.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L20 pradeda leistis.
+
+T = 254
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L20 leidziasi, kol nusileis liko laiko: 1.
+
+T = 255
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L20 nusileido.
+
+T = 256
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 257
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 258
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 259
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 260
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 261
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 262
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 263
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 264
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 265
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 266
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 267
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 268
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 269
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 270
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 271
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 272
+
+	Lektuvai norintys leistis: L21.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L21 pradeda leistis.
+
+T = 273
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L21 leidziasi, kol nusileis liko laiko: 1.
+
+T = 274
+
+	Lektuvai norintys leistis: L22.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L21 nusileido.
+
+T = 275
+
+	Lektuvai norintys leistis: L22.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L22 pradeda leistis.
+
+T = 276
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K18.
+	Lektuvas L22 leidziasi, kol nusileis liko laiko: 1.
+
+T = 277
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K18.
+	Lektuvas L22 nusileido.
+
+T = 278
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K18.
+	Lektuvas K18 pradeda kilti.
+
+T = 279
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K18 pakilo.
+
+T = 280
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 281
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 282
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K19.
+	Lektuvas K19 pradeda kilti.
+
+T = 283
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K19 pakilo.
+
+T = 284
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 285
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 286
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 287
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 288
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 289
+
+	Lektuvai norintys leistis: L23.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L23 pradeda leistis.
+
+T = 290
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L23 leidziasi, kol nusileis liko laiko: 1.
+
+T = 291
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L23 nusileido.
+
+T = 292
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 293
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 294
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 295
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 296
+
+	Lektuvai norintys leistis: L24.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L24 pradeda leistis.
+
+T = 297
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L24 leidziasi, kol nusileis liko laiko: 1.
+
+T = 298
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L24 nusileido.
+
+T = 299
+
+	Lektuvai norintys leistis: L25.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L25 pradeda leistis.
+
+T = 300
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L25 leidziasi, kol nusileis liko laiko: 1.
+
+T = 301
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas L25 nusileido.
+
+T = 302
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K20.
+	Lektuvas K20 pradeda kilti.
+
+T = 303
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K20 pakilo.
+
+T = 304
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 305
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 306
+
+	Lektuvai norintys leistis: L26.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L26 pradeda leistis.
+
+T = 307
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L26 leidziasi, kol nusileis liko laiko: 1.
+
+T = 308
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L26 nusileido.
+
+T = 309
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 310
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 311
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K21.
+	Lektuvas K21 pradeda kilti.
+
+T = 312
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K21 pakilo.
+
+T = 313
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 314
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 315
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 316
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 317
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 318
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 319
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 320
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 321
+
+	Lektuvai norintys leistis: L27.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L27 pradeda leistis.
+
+T = 322
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L27 leidziasi, kol nusileis liko laiko: 1.
+
+T = 323
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K22.
+	Lektuvas L27 nusileido.
+
+T = 324
+
+	Lektuvai norintys leistis: L28.
+	Lektuvai norintys kilti:  K22.
+	Lektuvas L28 pradeda leistis.
+
+T = 325
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K22.
+	Lektuvas L28 leidziasi, kol nusileis liko laiko: 1.
+
+T = 326
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K22.
+	Lektuvas L28 nusileido.
+
+T = 327
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K22.
+	Lektuvas K22 pradeda kilti.
+
+T = 328
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K22 pakilo.
+
+T = 329
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 330
+
+	Lektuvai norintys leistis: L29.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L29 pradeda leistis.
+
+T = 331
+
+	Lektuvai norintys leistis: L30.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L29 leidziasi, kol nusileis liko laiko: 1.
+
+T = 332
+
+	Lektuvai norintys leistis: L30.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L29 nusileido.
+
+T = 333
+
+	Lektuvai norintys leistis: L30, L31.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L30 pradeda leistis.
+
+T = 334
+
+	Lektuvai norintys leistis: L31.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L30 leidziasi, kol nusileis liko laiko: 1.
+
+T = 335
+
+	Lektuvai norintys leistis: L31.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L30 nusileido.
+
+T = 336
+
+	Lektuvai norintys leistis: L31.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L31 pradeda leistis.
+
+T = 337
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L31 leidziasi, kol nusileis liko laiko: 1.
+
+T = 338
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L31 nusileido.
+
+T = 339
+
+	Lektuvai norintys leistis: L32.
+	Lektuvai norintys kilti:  K23.
+	Lektuvas L32 pradeda leistis.
+
+T = 340
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K23.
+	Lektuvas L32 leidziasi, kol nusileis liko laiko: 1.
+
+T = 341
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K23.
+	Lektuvas L32 nusileido.
+
+T = 342
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K23.
+	Lektuvas K23 pradeda kilti.
+
+T = 343
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+	Lektuvas K23 pakilo.
+
+T = 344
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 345
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 346
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 347
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 348
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 349
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 350
+
+	Lektuvai norintys leistis: L33.
+	Nera lektuvu norinciu kilti.
+	Lektuvas L33 pradeda leistis.
+
+T = 351
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K24.
+	Lektuvas L33 leidziasi, kol nusileis liko laiko: 1.
+
+T = 352
+
+	Lektuvai norintys leistis: L34.
+	Lektuvai norintys kilti:  K24.
+	Lektuvas L33 nusileido.
+
+T = 353
+
+	Lektuvai norintys leistis: L34.
+	Lektuvai norintys kilti:  K24.
+	Lektuvas L34 pradeda leistis.
+
+T = 354
+
+	Nera lektuvu norinciu leistis.
+	Lektuvai norintys kilti:  K24.
+	Lektuvas L34 leidziasi, kol nusileis liko laiko: 1.
+
+T = 355
+
+	Lektuvai norintys leistis: L35.
+	Lektuvai norintys kilti:  K24.
+	Lektuvas L34 nusileido.
+
+T = 356
+
+	Lektuvai norintys leistis: L35, L36.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L35 pradeda leistis.
+
+T = 357
+
+	Lektuvai norintys leistis: L36, L37.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L35 leidziasi, kol nusileis liko laiko: 1.
+
+T = 358
+
+	Lektuvai norintys leistis: L36, L37.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L35 nusileido.
+
+T = 359
+
+	Lektuvai norintys leistis: L36, L37.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L36 pradeda leistis.
+
+T = 360
+
+	Lektuvai norintys leistis: L37.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L36 leidziasi, kol nusileis liko laiko: 1.
+
+T = 361
+
+	Lektuvai norintys leistis: L37.
+	Lektuvai norintys kilti:  K24, K25.
+	Lektuvas L36 nusileido.
+
+T = 362
+
+	Lektuvai norintys leistis: L37.
+	Lektuvai norintys kilti:  K24, K25.
+	L37 Lektuvas suduzo.
+
+III - REZULTATAI
+
+1) 37 lektuvai norejo nusileisti, o nusileido: 36 lektuvai
+2) 25 lektuvai norejo pakilti, o pakilo: 23 lektuvai
+3) Didziausias norincio nusileisti lektuvo laukimo laikas: 4
+4) Vidutinis norincio nusileisti lektuvo laukimo laikas: 1.4
+5) Didziausias norincio pakilti lektuvo laukimo laikas: 7
+6) Vidutinis norincio pakilti lektuvo laukimo laikas: 2.9

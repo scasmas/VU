@@ -1,0 +1,134 @@
+Justas Stonkus 4 grupė, 2 pogrupis, 3 užduotis 4 variantas
+
+4. Aerouostas (ADT: prioritetinė eilė, ilgas sveikas skaičius). Aerouostas turi 1 pakilimo/nusileidimo
+taką, besileidžiantys lėktuvai turi prioritetą, t. y. jei takas laisvas, tai pirmiausia priimamas
+besileidžiantis lėktuvas, bet jei kažkuris lėktuvas pradėjo pakilimą, tai visi kiti, tame tarpe ir norintys
+nusileisti, lėktuvai turi laukti; lėktuvas, norintis nusileisti, negali laukti labai ilgai, nes jam baigsis
+degalai. Tikslas: patyrinėti prie kokio apkrovimo aerouostui pakanka vieno tako. Pradiniai duomenys:
+nusileidimo laikas (trukmė), pakilimo laikas (trukmė), laikas, kurį norintis leistis lėktuvas, dar gali
+išbūti ore, lėktuvo panorusio kilti/leistis einamuoju momentu tikimybė (galima realizacija:
+generuojamas atsitiktinis skaičius ir tikrinama, ar jis tenkina tam tikrą sąlygą), besileidžiantys ir
+kylantys lėktuvai pasirodo su vienoda tikimybe. Rezultatai: nukritęs lėktuvas (modeliavimas iš karto
+baigiamas), maksimalus ir vidutinis norinčio nusileisti lėktuvo laukimo laikas, maksimalus ir vidutinis
+norinčio pakilti lėktuvo laukimo laikas.
+
+--------------------------------------------------
+
+I DALIS - DUOMENYS
+
+1) Nusileidimo laikas: 3 min.
+2) Pakilimo laikas: 2 min.
+3) Laikas, kuri lektuvas gali buti ore: 6 min.
+4) Tikimybe, kad atsiras lektuvas norintis pakilti ar nusileisti: 65%.
+
+II DALIS - VYKDYMAS
+
+T = 0
+
+	Nera lektuvu norinciu leistis.
+	Nera lektuvu norinciu kilti.
+
+T = 1
+
+	Lektuvai norintys leistis: L1.
+	Lektuvai norintys kilti:  K1.
+	Lektuvas L1 pradeda leistis.
+
+T = 2
+
+	Lektuvai norintys leistis: L2.
+	Lektuvai norintys kilti:  K1, K2.
+	Lektuvas L1 leidziasi, kol nusileis liko laiko: 1.
+
+T = 3
+
+	Lektuvai norintys leistis: L2.
+	Lektuvai norintys kilti:  K1, K2, K3.
+	Lektuvas L1 nusileido.
+
+T = 4
+
+	Lektuvai norintys leistis: L2.
+	Lektuvai norintys kilti:  K1, K2, K3, K4.
+	Lektuvas L2 pradeda leistis.
+
+T = 5
+
+	Lektuvai norintys leistis: L3.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5.
+	Lektuvas L2 leidziasi, kol nusileis liko laiko: 1.
+
+T = 6
+
+	Lektuvai norintys leistis: L3, L4.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6.
+	Lektuvas L2 nusileido.
+
+T = 7
+
+	Lektuvai norintys leistis: L3, L4.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6.
+	Lektuvas L3 pradeda leistis.
+
+T = 8
+
+	Lektuvai norintys leistis: L4.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6.
+	Lektuvas L3 leidziasi, kol nusileis liko laiko: 1.
+
+T = 9
+
+	Lektuvai norintys leistis: L4.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7.
+	Lektuvas L3 nusileido.
+
+T = 10
+
+	Lektuvai norintys leistis: L4, L5.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8.
+	Lektuvas L4 pradeda leistis.
+
+T = 11
+
+	Lektuvai norintys leistis: L5, L6.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9.
+	Lektuvas L4 leidziasi, kol nusileis liko laiko: 1.
+
+T = 12
+
+	Lektuvai norintys leistis: L5, L6.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9, K10.
+	Lektuvas L4 nusileido.
+
+T = 13
+
+	Lektuvai norintys leistis: L5, L6, L7.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9, K10, K11.
+	Lektuvas L5 pradeda leistis.
+
+T = 14
+
+	Lektuvai norintys leistis: L6, L7.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9, K10, K11.
+	Lektuvas L5 leidziasi, kol nusileis liko laiko: 1.
+
+T = 15
+
+	Lektuvai norintys leistis: L6, L7, L8.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9, K10, K11, K12.
+	Lektuvas L5 nusileido.
+
+T = 16
+
+	Lektuvai norintys leistis: L6, L7, L8.
+	Lektuvai norintys kilti:  K1, K2, K3, K4, K5, K6, K7, K8, K9, K10, K11, K12, K13.
+	L6 Lektuvas suduzo.
+
+III - REZULTATAI
+
+1) 8 lektuvai norejo nusileisti, o nusileido: 5 lektuvai
+2) 13 lektuvai norejo pakilti, o pakilo: 0 lektuvai
+3) Didziausias norincio nusileisti lektuvo laukimo laikas: 5
+4) Vidutinis norincio nusileisti lektuvo laukimo laikas: 3.2
+5) Didziausias norincio pakilti lektuvo laukimo laikas: nepakilo nei vienas lektuvas
+6) Vidutinis norincio pakilti lektuvo laukimo laikas: nepakilo nei vienas lektuvas
